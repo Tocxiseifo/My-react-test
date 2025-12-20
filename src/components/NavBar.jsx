@@ -27,13 +27,13 @@ export default function NavBar() {
         if (openNav === false) {
             setOpenNav(() => true)
         }else if(openNav === true) {
-            setOpenNav(() => false )
+            setOpenNav(() => false)
         }
     }
 
     return(
         <>
-            <nav className='bg-bg-color text-nav-color justify-between flex  flex-row md:justify-evenly  md:pt-4 md:h-21 font-custom-font  md:flex  md:flex-row md:items-center h-10'>
+            <nav className='bg-bg-color text-nav-color items-center justify-between flex  flex-row md:justify-evenly  md:pt-4 md:h-21 font-custom-font  md:flex  md:flex-row md:items-center h-10'>
                 <img src={img} alt="" className='w-38.75 h-6' />
                 <div className=' flex-col gap-10 list-none hidden  text-[16px] text-nav-color  md:flex md:flex-row md:items-center'>
                     <li className='hover:text-main-green transition-all duration-500 hover:duration-500 active:text-main-green active:duration-500'><a className='relative z-10' href="#">Home</a></li>

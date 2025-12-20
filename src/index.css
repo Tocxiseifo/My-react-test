@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-green:  oklch(67.30% 0.163 144.01);
+  --color-bg-color: oklch(97.55% 0.005 258.32);
+  --color-text-color: oklch(42.02% 0.000 0);
+  --font-custom-font: interFont , 'sans-serif';
+  --color-nav-color:oklch(21.50% 0.012 277.89);
+  --color-p-color:oklch(54.86% 0.000 0);
+}
+
+@font-face{
+  src: url("./assets/Fonts/Inter-VariableFont_opsz\,wght.ttf");
+  font-family: interFont;
+  font-weight: 400;
+}

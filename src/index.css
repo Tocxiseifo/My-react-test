@@ -7,8 +7,13 @@
   --font-custom-font: interFont , 'sans-serif';
   --color-nav-color:oklch(21.50% 0.012 277.89);
   --color-p-color:oklch(54.86% 0.000 0);
+  --color-footer-color:oklch(30.87% 0.019 229.78)
 }
-
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 @font-face{
   src: url("./assets/Fonts/Inter-VariableFont_opsz\,wght.ttf");
   font-family: interFont;

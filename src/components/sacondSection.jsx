@@ -132,7 +132,7 @@ export default function SecondSection() {
                 <Reveal>
                     <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:100}}  transition={{duration:1 , ease:'easeOut' , delay:'0.3'}} className='w-full h-126.5 flex flex-col gap-4 items-center text-center'>
                         <div>
-                            <motion.h1  initial={{opacity:0 , y:-100}} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-text-color font-semibold text-4xl leading-11 mb-2'>Caring is the new marketing</motion.h1>
+                            <motion.h1  initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-text-color font-semibold text-4xl leading-11 mb-2'>Caring is the new marketing</motion.h1>
                             <motion.p initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }}    transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-p-color w-157 h-18'>The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.</motion.p>
                         </div>
                             <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.7'}} className='h-91.5 w-full flex flex-col justify-center items-center md:gap-4 md:flex-row md:justify-center md:items-center md:-mt-14'>

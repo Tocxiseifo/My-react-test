@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from 'react'
+//===============Image Imports=============
 import img from '../assets/images/image copy.png'
 import img1 from '../assets/images/image copy 2.png'
 import img2 from '../assets/images/image copy 3.png'
@@ -12,10 +12,12 @@ import img8 from '../assets/images/image copy 8.png'
 import img9 from '../assets/images/image copy 11.png'
 import img10 from '../assets/images/image copy 12.png'
 
+//===============Motion======================
 import { motion, useMotionValue } from 'motion/react'
-import useMeasure from 'react-use-measure'
-import { animate } from 'motion'
 import Reveal from './Revel'
+
+//===============HOOKS======================
+import { useState } from 'react'
 
 const image = [
     {

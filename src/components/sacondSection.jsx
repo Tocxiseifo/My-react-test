@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useRef } from 'react'
+//===============Image Imports=============
 import img13 from '../assets/images/image copy 13.png'
 import img14 from '../assets/images/image copy 14.png'
 import img15 from '../assets/images/image copy 15.png'
@@ -7,9 +7,6 @@ import img16 from '../assets/images/image copy 16.png'
 import img17 from '../assets/images/image copy 18.png'
 import img18 from '../assets/images/image copy 17.png'
 import img19 from '../assets/images/image copy 19.png'
-
-
-///
 import img20 from '../assets/images/image copy 20.png'
 import img21 from '../assets/images/image copy 3.png'
 import img22 from '../assets/images/image copy 4.png'
@@ -26,7 +23,6 @@ import { motion , useInView, useScroll } from 'motion/react'
 import Counter from './animation'
 import Reveal from './Revel'
 
-const variantChildrens ={hidden: {opacity: 0} , show: {opacity:1}}
 export default function SecondSection() {
     
     return(

@@ -58,14 +58,14 @@ export default function SectionOne() {
                     <div className='flex flex-row font-custom-font h-80 w-full justify-center align-middle  font-semibold gap-12'>
                         <motion.div initial={{opacity:0 , y:100}} whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.2}} className='h-57.5 w-164.25 flex flex-col gap-2.5'>
-                            <motion.h1 initial={{opacity:0 , x:-100}} animate={{opacity:1 , x:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.3}} className='text-text-color leading-19 md:text-[64px] font-semibold'>Lessons and insights</motion.h1>
-                            <motion.span initial={{opacity:0 , x:100}} animate={{opacity:1 , x:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='text-main-green text-4x1 leading-19 md:text-[64px]  font-semibold relative bottom-5'>from 8 years</motion.span>
+                            <motion.h1 initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.3}} className='text-text-color leading-19 md:text-[64px] font-semibold'>Lessons and insights</motion.h1>
+                            <motion.span initial={{opacity:0 , x:100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='text-main-green text-4x1 leading-19 md:text-[64px]  font-semibold relative bottom-5'>from 8 years</motion.span>
                             <motion.p initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} className='text-p-color'>Where to grow your business as a photographer: site or social media?</motion.p>
                             <button className='bg-main-green md:h-13 md:w-34 rounded-sm text-gray-100 hover:bg-green-800 hover:duration-500 duration-500 transition-all cursor-pointer active:bg-green-800 p-3.5 mt-7 '>Register</button>
                         </motion.div>
                         <div className='w-97.75 h-101.75'>
-                            <motion.img initial={{opacity:0 , x:100}} animate={{opacity:1 , x:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} src={img} alt="" className='w-97.75 h-101.75 relative bottom-10 '/>
+                            <motion.img initial={{opacity:0 , x:100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} src={img} alt="" className='w-97.75 h-101.75 relative bottom-10 '/>
                         </div>
                     </div>
                     <div className='flex flex-row w-11.5 h-2.5 gap-2'>
@@ -81,7 +81,7 @@ export default function SectionOne() {
                         <motion.p initial={{opacity:0 , y:100}} whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='text-p-color text-[16px] leading-6 font-normal'>We have been working with some Fortune 500+ clients</motion.p>
                     </div>
-                    <motion.div  initial={{opacity:0 , x:-100}} animate={{opacity:1 , x:0}} transition={{duration:1 , ease:'easeOut' ,delay:1.2}} className='w-6xl h-24.5 flex flex-row justify-between items-center'>
+                    <motion.div  initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:1.2}} className='w-6xl h-24.5 flex flex-row justify-between items-center'>
                         {image.map((m)=>{
                         return(
                             <div key={m.id}>
@@ -97,7 +97,7 @@ export default function SectionOne() {
                                 <p className='text-p-color h-6 w-360 text-[16px] leading-6'>Who is Nextcent suitable for?</p>
                             </motion.div>
                             <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1, ease: "easeOut", delay: 0.4 }} className='flex flex-col justify-center items-center md:flex-row md:w-360 md:h-70 md:justify-evenly'>
-                                <motion.div initial={{opacity:0 , x:-100}} animate={{opacity:1 , x:0}}   transition={{ duration: 1, ease: "easeOut", delay: 0.5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} className='w-74.75 h-65 rounded-lg gap-2 flex flex-col justify-center items-center text-center  shadow-[0_2px_4px_0_#ABBED133]'>
+                                <motion.div initial={{opacity:0 , x:-100}}    transition={{ duration: 1, ease: "easeOut", delay: 0.5 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} className='w-74.75 h-65 rounded-lg gap-2 flex flex-col justify-center items-center text-center  shadow-[0_2px_4px_0_#ABBED133]'>
                                     <img src={img8} alt="" className='w-[65] h-14' />
                                     <h1 className='text-text-color h-18 w-66.75 font-bold text-[28px] leading-9.5'>Membership Organisations</h1>
                                     <p className='text-p-color w-62.75 h-15 text-sm leading-5 font-normal '>Our membership management software provides full automation of membership renewals and payments</p>

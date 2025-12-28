@@ -36,9 +36,9 @@ export default function NavBar() {
 
     return(
         <>
-            <motion.nav className='pb-2 bg-bg-color text-nav-color items-center justify-between flex  flex-row md:justify-evenly  md:pt-4 md:h-21 font-custom-font  md:flex  md:flex-row md:items-center h-10'>
-                <motion.img initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.5}}  src={img} alt="" className='w-38.75 h-6' />
-                <motion.div  initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} className=' flex-col gap-10 list-none hidden  text-[16px] text-nav-color  md:flex md:flex-row md:items-center'>
+            <motion.nav className='pb-2 bg-bg-color w-full text-nav-color items-center justify-between flex  flex-row md:justify-evenly  md:pt-4 md:h-21  font-custom-font  md:flex  md:flex-row md:items-center h-10'>
+                <motion.img initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.5}}  src={img} alt="" className='w-28 h-5 md:w-38.75 md:mr-110  md:h-6 lg:mr-8 xl:mr-0 ' />
+                <motion.div  initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} className=' flex-col gap-10 list-none hidden  text-[16px] text-nav-color  lg:flex lg:flex-row md:items-center'>
                     <li className='hover:text-main-green transition-all duration-500 hover:duration-500 active:text-main-green active:duration-500'><a className='relative z-10' href="#">Home</a></li>
                     <li className='hover:text-main-green transition-all duration-500 hover:duration-500 active:text-main-green active:duration-500'><a className='relative z-10' href="#">Service</a></li>
                     <li className='hover:text-main-green transition-all duration-500 hover:duration-500 active:text-main-green active:duration-500'><a href="#">Feature</a></li>
@@ -46,17 +46,17 @@ export default function NavBar() {
                     <li className='hover:text-main-green transition-all duration-500 hover:duration-500 active:text-main-green active:duration-500'><a href="#">Testimonial</a></li>
                     <li className='hover:text-main-green transition-all duration-500 hover:duration-500 active:text-main-green active:duration-500'><a href="#">FAQ</a></li>
                 </motion.div>
-                <div className='flex flex-row gap-4'>
-                    <motion.button initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='hidden md:flex md:justify-center md:items-center text-main-green bg-white cursor-pointer w-19.25 h-10 rounded-md hover:bg-gray-200 hover:duration-500 duration-300 transition-all'>Login</motion.button>
-                    <motion.button initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:1}}  className='hidden md:flex text-white md:justify-center md:items-center bg-main-green cursor-pointer w-22.75 h-10 rounded-md hover:bg-green-800 hover:duration-500 duration-500 transition-all'>Sign up</motion.button>
-                    <button className='md:hidden flex justify-center items-center'><DragHandleIcon className='text-main-green' onClick={handleOpenNav} value={openNav}/></button>
+                <div className='flex flex-row gap-4 lg:ml-8 xl:ml-0'>
+                    <motion.button initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='hidden lg:flex md:justify-center md:items-center text-main-green bg-white cursor-pointer w-19.25 h-10 rounded-md hover:bg-gray-200 hover:duration-500 duration-300 transition-all'>Login</motion.button>
+                    <motion.button initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:1}}  className='hidden lg:flex text-white md:justify-center md:items-center bg-main-green cursor-pointer w-22.75 h-10 rounded-md hover:bg-green-800 hover:duration-500 duration-500 transition-all'>Sign up</motion.button>
+                    <motion.button initial={{opacity:0 , y:-100}} animate={{opacity:1 , y:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='lg:hidden flex justify-center items-center'><DragHandleIcon className='text-main-green' onClick={handleOpenNav} value={openNav}/></motion.button>
                     <Drawer
                         variant="persistent"
                         anchor="right"
                         open={openNav}
                     >
                         <IconButton onClick={handleOpenNav}>
-                            <DragHandleIcon/>
+                            <DragHandleIcon className='text-main-green'/>
                         </IconButton>
                         <Divider />
                         <List className='w-40'>

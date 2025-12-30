@@ -22,14 +22,13 @@ import img29 from '../assets/images/image copy 24.png'
 import { motion , useInView, useScroll } from 'motion/react'
 import Counter from './animation'
 import Reveal from './Revel'
-
+import { useRef } from 'react'
 export default function SecondSection() {
-    
+    const ref = useRef(null);
     return(
-        <Reveal>
             <section className="xl:h-[2242.4px] w-full flex h-auto flex-col gap-12">
-                <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }}  initial={{opacity:0 , y:-100}}  transition={{duration:1 , ease:'easeOut' ,delay:0.2}} className="w-full h-auto lg:h-108.25 flex flex-col lg:flex-row md:w-[75%] lg:w-full relative  md:top-212.5 lg:top-0  justify-center items-center  lg:justify-center  lg:items-center ">
-                    <motion.img  initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
+                <motion.div ref={ref} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }}  initial={{opacity:0 , y:-100}}  transition={{duration:1 , ease:'easeOut' ,delay:0.2}} className="w-full h-auto lg:h-108.25 flex flex-col lg:flex-row md:w-[75%] lg:w-full relative  md:top-212.5 lg:top-0  justify-center items-center  lg:justify-center  lg:items-center ">
+                    <motion.img ref={ref} initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} src={img13} alt="" className='w-110.5 h-108.25 relative md:left-16 lg:left-0 object-contain'/>
                     <motion.div initial={{opacity:0 , y:100}} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.8}}  className='flex flex-col justify-center lg:items-start text-center md:flex-col w-full h-auto lg:h-67 lg:w-165.25 gap-4 items-center'>
@@ -38,7 +37,7 @@ export default function SecondSection() {
                         <button className='w-37.75 h-13 rounded-sm bg-main-green md:ml-36 lg:ml-0 text-gray-100 relative lg:top-5 xl:top-0  hover:bg-green-800 active:bg-green-800 hover:duration-500 duration-500 transition-all cursor-pointer'>Learn More</button>
                     </motion.div>
                 </motion.div>
-                <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:100}}  transition={{duration:1 , ease:'easeOut' ,delay:0.4}} className='w-full  h-auto lg:h-72 flex flex-col justify-center items-center md:flex lg:flex-row lg:justify-evenly lg:items-center md:mt-212.5 lg:mt-0 lg:text-center bg-bg-color'>
+                <motion.div ref={ref} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:100}}  transition={{duration:1 , ease:'easeOut' ,delay:0.4}} className='w-full  h-auto lg:h-72 flex flex-col justify-center items-center md:flex lg:flex-row lg:justify-evenly lg:items-center md:mt-212.5 lg:mt-0 lg:text-center bg-bg-color'>
                     <motion.div initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.4}} className='lg:w-135 lg:h-30 w-[80%] md:w-full h-auto   flex flex-col lg:text-start text-center  '>
                         <motion.h1 initial={{opacity:0 , x:-100}} animate={{opacity:1 , x:0}} transition={{duration:1 , ease:'easeOut' ,delay:0.9}} className='lg:w-92.5 text-text-color text-center lg:text-start lg:ml-4 xl:ml-0 text-2xl lg:text-4xl leading-11 font-semibold'>Helping a local <motion.span initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +83,7 @@ export default function SecondSection() {
                         </motion.div>
                     </motion.div>
                 </motion.div>
-                <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }}  initial={{opacity:0 , y:-100}}  transition={{duration:1 , ease:'easeOut' ,delay:0.2}} className="w-full h-auto lg:h-108.25 flex flex-col md:flex-row md:justify-center  md:items-center justify-center text-center items-center ">
+                <motion.div ref={ref} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }}  initial={{opacity:0 , y:-100}}  transition={{duration:1 , ease:'easeOut' ,delay:0.2}} className="w-full h-auto lg:h-108.25 flex flex-col md:flex-row md:justify-center  md:items-center justify-center text-center items-center ">
                     <motion.img  initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} src={img18} alt="" className='w-110.5 h-108.25 relative md:right-12 object-contain pl-4 xl:pl-0   '/>
                     <motion.div initial={{opacity:0 , y:100}} whileInView={{ opacity: 1, y: 0 }}
@@ -96,10 +95,9 @@ export default function SecondSection() {
                         <button className='w-37.75 h-13 rounded-sm bg-main-green text-gray-100 hover:bg-green-800 active:bg-green-800 hover:duration-500 duration-500 transition-all cursor-pointer'>Learn More</button>
                     </motion.div>
                 </motion.div>
-                 <Reveal>
-                    <motion.div  initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }} className='w-full lg:h-97.5 h-auto flex flex-col justify-center items-center md:text-center md:h-190 lg:flex-row lg:justify-center lg:items-center lg:text-center lg:gap-19.5 bg-bg-color' >
+                    <motion.div ref={ref}  initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }} className='w-full lg:h-97.5 h-auto flex flex-col justify-center items-center md:text-center md:h-190 lg:flex-row lg:justify-center lg:items-center lg:text-center lg:gap-19.5 bg-bg-color' >
                         <motion.img className='w-81.5 h-81.5 object-contain xl:pl-0 relative lg:left-14 xl:left-0  ' src={img19} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }} />
-                        <motion.dev className='lg:w-187 w-full h-auto lg:h-81   lg:gap-8'initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}>
+                        <motion.dev className='lg:w-187 w-full h-auto lg:h-81   lg:gap-8'initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}>
                             <motion.dev  className='lg:h-81 lg:w-187 w-full h-auto gap-4 flex flex-col justify-center lg:text-start text-center '>
                                 <p className='text-p-color lg:h-42 lg:w-167.5 xl:w-187 w-full h-auto text-[16px] leading-6 font-medium'>Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
                                 <span className='text-main-green text-[20px] relative leading-7 lg:top-3 xl:top-0 font-semibold'>Tim Smith</span>
@@ -124,15 +122,13 @@ export default function SecondSection() {
                             </motion.dev>
                         </motion.dev>
                     </motion.div>
-                </Reveal>
-                <Reveal>
-                    <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:100}}  transition={{duration:1 , ease:'easeOut' , delay:'0.3'}} className='w-full lg:h-126.5 h-auto flex flex-col gap-4 items-center text-center'>
+                    <motion.div ref={ref} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} initial={{opacity:0 , y:100}}  transition={{duration:1 , ease:'easeOut' , delay:'0.3'}} className='w-full lg:h-126.5 h-auto flex flex-col gap-4 items-center text-center'>
                         <div>
-                            <motion.h1  initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-text-color font-semibold text-2xl md:text-3xl lg:text-4xl leading-11 mb-2'>Caring is the new marketing</motion.h1>
-                            <motion.p initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }}    transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-p-color lg:w-157  md:w-[85%]  md:ml-14 lg:ml-0 w-full h-auto lg:h-18'>The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.</motion.p>
+                            <motion.h1  initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-text-color font-semibold text-2xl md:text-3xl lg:text-4xl leading-11 mb-2'>Caring is the new marketing</motion.h1>
+                            <motion.p initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.1 }}    transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='text-p-color lg:w-157  md:w-[85%]  md:ml-14 lg:ml-0 w-full h-auto lg:h-18'>The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.</motion.p>
                         </div>
-                            <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.7'}} className='lg:h-91.5 h-auto w-full flex flex-col justify-center items-center gap-12 md:justify-center   md:gap-4 lg:flex-row lg:justify-center md:items-center lg:-mt-10'>
-                                <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='w-92 h-91.5 lg:left-4 xl:left-0  relative flex flex-col justify-center  items-center'>
+                            <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{duration:1 , ease:'easeOut' , delay:'0.7'}} className='lg:h-91.5 h-auto w-full flex flex-col justify-center items-center gap-12 md:justify-center   md:gap-4 lg:flex-row lg:justify-center md:items-center lg:-mt-10'>
+                                <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className='w-92 h-91.5 lg:left-4 xl:left-0  relative flex flex-col justify-center  items-center'>
                                     <div>
                                         <img src={img27} alt="" srcset="" className='xl:w-92 xl:h-71.5 lg:w-[95%] lg:h-65 w-[85%]  h-auto relative left-7   md:left-0 md:w-full   rounded-lg' />
                                     </div> 
@@ -141,7 +137,7 @@ export default function SecondSection() {
                                         <span className='text-main-green w-71.25 gap-2 h-11 font-semibold text-[20px] leading-7 flex flex-row justify-center items-center cursor-pointer hover:text-green-800 active:text-green-800 hover:duration-500 duration-500 transition-all '>Readmore <img src={img26} alt="" className='w-6 h-6' /></span>
                                     </div>
                                 </motion.div>
-                                <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.8'}} className='w-92 h-91.5 lg:left-4 xl:left-0  relative flex flex-col justify-center items-center '>
+                                <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{duration:1 , ease:'easeOut' , delay:'0.8'}} className='w-92 h-91.5 lg:left-4 xl:left-0  relative flex flex-col justify-center items-center '>
                                     <div>
                                         <img src={img28} alt="" srcset="" className='xl:w-92 xl:h-71.5 lg:w-[95%] lg:h-65 w-[85%] h-auto relative left-7 md:left-0 md:w-full  rounded-lg' />
                                     </div> 
@@ -150,7 +146,7 @@ export default function SecondSection() {
                                         <span className='text-main-green w-71.25 gap-2 h-11 font-semibold text-[20px] leading-7 flex flex-row justify-center items-center cursor-pointer  hover:text-green-800 active:text-green-800 hover:duration-500 duration-500 transition-all'>Readmore <img src={img26} alt="" className='w-6 h-6' /></span>
                                     </div>
                                 </motion.div>
-                                <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'1.2'}} className='w-92 h-91.5  relative flex flex-col justify-center items-center'>
+                                <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{duration:1 , ease:'easeOut' , delay:'1.2'}} className='w-92 h-91.5  relative flex flex-col justify-center items-center'>
                                     <div>
                                         <img src={img29} alt="" srcset="" className='xl:w-92 xl:h-71.5 lg:w-[95%] lg:h-65 w-[85%] h-auto relative left-7 md:left-0 md:w-full  rounded-lg' />
                                     </div> 
@@ -161,8 +157,6 @@ export default function SecondSection() {
                                 </motion.div>
                             </motion.div>
                     </motion.div>
-                </Reveal>
             </section>
-        </Reveal>
     )
 }

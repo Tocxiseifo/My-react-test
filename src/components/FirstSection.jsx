@@ -13,11 +13,11 @@ import img9 from '../assets/images/image copy 11.png'
 import img10 from '../assets/images/image copy 12.png'
 
 //===============Motion======================
-import { motion, useMotionValue } from 'motion/react'
+import { motion, useMotionValue , useInView } from 'motion/react'
 import Reveal from './Revel'
 
 //===============HOOKS======================
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const image = [
     {
@@ -53,6 +53,9 @@ const image = [
 
 export default function SectionOne() {
     const [activeBtn, setActiveBtn] = useState(1);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    
     return(
         <Reveal>
             <section className='w-full h-auto md:h-314.5 flex flex-col  items-center'>
@@ -63,8 +66,8 @@ export default function SectionOne() {
                           <motion.h1 initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.3}} className='text-text-color md:leading-19 text-3xl md:text-5xl lg:text-[64px] font-semibold'>Lessons and insights</motion.h1>
                           <motion.span initial={{opacity:0 , x:100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.5}} className='text-main-green text-4x1 md:leading-19 text-3xl md:text-5xl lg:text-[64px]  font-semibold relative lg:bottom-3  md:bottom-12 '>from 8 years</motion.span>
                           <motion.p initial={{opacity:0 , y:-100}} whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true, amount: 0.2 }} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} className='text-p-color md:absolute -bottom-12 lg:bottom-0 lg:relative   md:text-[14px]'>Where to grow your business as a photographer: site or social media?</motion.p>
-                          <button className='bg-main-green w-36.25 md:relative lg:relative lg:bottom-0 md:bottom-14   md:h-13 md:w-34 rounded-sm text-gray-100 hover:bg-green-800 hover:duration-500 duration-500 transition-all cursor-pointer active:bg-green-800 p-3.5 mt-7 mb-4 '>Register</button>
+                          viewport={{ once: true, amount: 0.2 }} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} className='text-p-color md:relative bottom-12 lg:bottom-0 lg:relative   md:text-[14px]'>Where to grow your business as a photographer: site or social media?</motion.p>
+                          <button className='bg-main-green w-36.25 md:relative lg:relative lg:bottom-0 md:bottom-16   md:h-13 md:w-34 rounded-sm text-gray-100 hover:bg-green-800 hover:duration-500 duration-500 transition-all cursor-pointer active:bg-green-800 p-3.5 mt-7 mb-4 '>Register</button>
                         </motion.div>
                         <div className='h-68 w-[85%]  md:mt-2 md:h-62.5   lg:w-97.75 md:text-center  lg:h-101.75'>
                             <motion.img initial={{opacity:0 , x:100}} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' ,delay:0.8}} src={img} alt="" className='w-97.75 h-101.75 relative lg:bottom-10 xl:bottom-3 sm:left-22 md:left-28  lg:left-0 object-contain'/>
@@ -92,9 +95,8 @@ export default function SectionOne() {
                         )
                         })}
                     </motion.div>
-                    <Reveal animation='left'>
-                        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut", delay: 0.3 }} className='lg:h-104 h-auto w-full lg:w-360 gap-24 md:gap-4 flex flex-col  justify-center items-center mt-11  '>
-                            <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut", delay: 0.4 }} className='h-30 w-360 justify-center flex flex-col gap-2 items-center text-center'>
+                        <motion.div ref={ref} initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut", delay: 0.3 }} className='lg:h-104 h-auto w-full lg:w-360 gap-24 md:gap-4 flex flex-col  justify-center items-center mt-11  '>
+                            <motion.div initial={ { opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut", delay: 0.4 }} className='h-30 w-360 justify-center flex flex-col gap-2 items-center text-center'>
                                 <h1 className='text-text-color md:w-135.5 md:h-22 text-2xl w-78 h-auto md:text-4xl leading-11 font-semibold'>Manage your entire community in a single system</h1>
                                 <p className='text-p-color h-6 w-360 text-[16px] leading-6'>Who is Nextcent suitable for?</p>
                             </motion.div>
@@ -116,7 +118,6 @@ export default function SectionOne() {
                                 </motion.div>
                             </motion.div>
                         </motion.div>
-                    </Reveal>
                 </div>
             </section>
         </Reveal>

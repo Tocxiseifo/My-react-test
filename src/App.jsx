@@ -23,7 +23,7 @@ function App() {
       }} 
       initial='hidden'
       animate='show'
-      className='flex flex-col md:w-full  overflow-x-hidden  h-1500 h-auto  font-custom-font '>
+      className='flex flex-col md:w-full  overflow-x-hidden md:overflow-y-hidden  h-1500 h-auto  font-custom-font '>
         <NavBar/>
         <SectionOne/>
         <SecondSection />

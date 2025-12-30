@@ -25,22 +25,22 @@ export default function Footer() {
                             <motion.p className="text-bg-color font-normal text-sm leading-5 h-5 w-87.5" whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , x:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:0.8}} >All rights reserved</motion.p>
                             <div className="md:w-44 md:h-8 w-full h-auto gap-4  flex flex-row">
                                 <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}  transition={{duration:1 , ease:'easeOut' , delay:'0.3'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
+                                    viewport={{ once: true, amount: 0.1 }}  transition={{duration:1 , ease:'easeOut' , delay:'0.3'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
                                     <img  src={instgram} alt="" className="w-4 h-4" />
                                 </motion.div>
 
                                 <motion.div initial={{opacity:0 ,x:-100}} whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
+                                    viewport={{ once: true, amount: 0.1 }} transition={{duration:1 , ease:'easeOut' , delay:'0.5'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
                                     <img src={basket} alt="" className="w-4 h-4" />
                                 </motion.div>
 
                                 <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}  transition={{duration:1 , ease:'easeOut' , delay:'0.7'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
+                                    viewport={{ once: true, amount: 0.1 }}  transition={{duration:1 , ease:'easeOut' , delay:'0.7'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
                                     <img  src={x} alt="" className="w-3.5 h-3.5" />
                                 </motion.div>
 
                                 <motion.div initial={{opacity:0 , x:-100}} whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}  transition={{duration:1 , ease:'easeOut' , delay:'1'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
+                                    viewport={{ once: true, amount: 0.1 }}  transition={{duration:1 , ease:'easeOut' , delay:'1'}} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 cursor-pointer">
                                     <img  src={youtube} alt="" className="w-4 h-3" />
                                 </motion.div>
                             </div>
@@ -68,7 +68,7 @@ export default function Footer() {
                             </div>
                         </motion.div>
                         <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.2}} 
-                        className="md:w-62.5 w-120 h-33  flex flex-col gap-6 mt-56 lg:mt-0  lg:right-6 xl:right-0 lg:pr-0 [@media(min-width:375px)_and_(max-width:1024px)]:pr-260 [@media(min-width:375px)_and_(max-width:1024px)]:pl-5 relative right-100 md:right-110 pr-15  md:-ml-64 lg:ml-0  pl-3 bg-footer-color">
+                        className="md:w-62.5 w-120 h-33  flex flex-col gap-6 mt-56 lg:mt-0  lg:right-6 xl:right-0 lg:pr-0 [@media(min-width:375px)_and_(max-width:1024px)]:pr-260 [@media(min-width:375px)_and_(max-width:1024px)]:pl-5 relative right-100 md:right-110 pr-15  md:-ml-65 lg:ml-0  pl-3 bg-footer-color">
                             <motion.h1 whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.5}} className="text-white font-semibold text-[20px] md:ml-7 lg:ml-0 leading-7 w-40 h-7">Stay up to date</motion.h1>
                             <motion.label whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.9}} className="relative w-64.75 h-10 md:ml-7 lg:ml-0 flex">
                                 <img src={wing} alt="" className="w-4 h-4 absolute top-2.5 left-56.25"/>

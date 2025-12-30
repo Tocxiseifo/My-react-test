@@ -104,12 +104,12 @@ export default function SectionOne() {
                                     <h1 className='text-text-color h-18 w-66.75 font-bold text-[28px] leading-9.5'>Membership Organisations</h1>
                                     <p className='text-p-color w-62.75 h-15 text-sm leading-5 font-normal '>Our membership management software provides full automation of membership renewals and payments</p>
                                 </motion.div>
-                                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }}  viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1, ease: "easeOut", delay: 1.5 }} className='w-74.75 h-65 rounded-lg gap-2 md:w-112.5 md:h-87.5 lg:w-74.75 lg:h-65 flex flex-col justify-center items-center text-center shadow-[0_2px_4px_0_#ABBED133]'>
+                                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }}  viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut", delay: 1.5 }} className='w-74.75 h-65 rounded-lg gap-2 md:w-112.5 md:h-87.5 lg:w-74.75 lg:h-65 flex flex-col justify-center items-center text-center shadow-[0_2px_4px_0_#ABBED133]'>
                                     <img src={img9} alt="" className='w-16.25 md:w-[40%] lg:w-16.25 md:h-32 lg:h-14 h-14' />
                                     <h1 className='text-text-color h-18 w-62.5 text-center font-bold text-[28px] leading-9.5'>National Associations</h1>
                                     <p className='text-p-color w-60 h-20 text-sm leading-5 font-normal '>Our membership management software provides full automation of membership renewals and payments</p>
                                 </motion.div>
-                                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1, ease: "easeOut", delay: 2 }} className='w-74.75 h-65 rounded-lg gap-2 md:w-112.5 md:h-87.5 lg:w-74.75 lg:h-65 flex flex-col justify-center items-center text-center shadow-[0_2px_4px_0_#ABBED133]'>
+                                <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut", delay: 2 }} className='w-74.75 h-65 rounded-lg gap-2 md:w-112.5 md:h-87.5 lg:w-74.75 lg:h-65 flex flex-col justify-center items-center text-center shadow-[0_2px_4px_0_#ABBED133]'>
                                     <img src={img10} alt="" className='w-16.25 md:w-[40%] lg:w-16.25 md:h-32 lg:h-14 h-14' />
                                     <h1 className='text-text-color h-18 w-55 md:  text-[28px] leading-9.5 font-bold'>Clubs And Groups</h1>
                                     <p className='text-p-color w-62.75 h-15 text-sm leading-5 font-normal '>Our membership management software provides full automation of membership renewals and payments</p>

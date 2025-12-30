@@ -68,9 +68,9 @@ export default function Footer() {
                             </div>
                         </motion.div>
                         <motion.div whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.2}} 
-                        className="md:w-62.5 w-120 h-33  flex flex-col gap-6 mt-56 lg:mt-0  lg:right-6 xl:right-0 lg:pr-0 [@media(min-width:375px)_and_(max-width:1024px)]:pr-260 [@media(min-width:375px)_and_(max-width:1024px)]:pl-5 relative right-100 md:right-110 pr-15  md:-ml-65 lg:ml-0  pl-3 bg-footer-color">
-                            <motion.h1 whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.5}} className="text-white font-semibold text-[20px] md:ml-7 lg:ml-0 leading-7 w-40 h-7">Stay up to date</motion.h1>
-                            <motion.label whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.9}} className="relative w-64.75 h-10 md:ml-7 lg:ml-0 flex">
+                        className="md:w-62.5 w-full h-33  flex flex-col gap-6 mt-56 lg:mt-0  lg:right-6 xl:right-0 lg:pr-0 [@media(min-width:375px)_and_(max-width:1024px)]:pr-260 [@media(min-width:375px)_and_(max-width:1024px)]:pl-5    relative right-100 md:right-140  pr-28  md:-ml-65 lg:ml-0  pl-3 bg-footer-color">
+                            <motion.h1 whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.5}} className="text-white font-semibold text-[20px] md:ml-35 lg:ml-0 leading-7 w-40 h-7">Stay up to date</motion.h1>
+                            <motion.label whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} initial={{opacity:0 , y:-100}}   transition={{duration:1 , ease:'easeOut' ,delay:1.9}} className="relative w-64.75 h-10 md:ml-34 lg:ml-0 flex">
                                 <img src={wing} alt="" className="w-4 h-4 absolute top-2.5 left-56.25"/>
                                 <input type="text" className="w-full h-full rounded-lg bg-white/10 text-[#D9DBE1] placeholder:text-[#D9DBE1] pl-4 outline-none" placeholder="Your email address"/>
                             </motion.label>
